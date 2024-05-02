@@ -18,5 +18,3 @@ COPY . .
 COPY ./entrypoint.sh .
 RUN chmod +x entrypoint.sh
 ENTRYPOINT ["./entrypoint.sh"]
-
-# RUN python3 manage.py collectstatic --noinput
