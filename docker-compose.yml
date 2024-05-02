@@ -16,6 +16,9 @@ services:
       - ./.env
     depends_on:
       - db
+    volumes:
+      - static:/backend-workdir/static
+      - media:/backend-workdir/img
   
   db:
     image: postgres:latest 
@@ -45,8 +48,13 @@ services:
     build: ./nginx
     ports:
       - 1337:80
+    volumes:
+      - static:/backend-workdir/static/
+      - media:/backend-workdir/img
     depends_on:
       - backend
 
 volumes:  
   local_pgdata1:  
+  static:
+  media:
