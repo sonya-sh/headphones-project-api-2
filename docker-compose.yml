@@ -13,7 +13,7 @@ services:
     expose:
       - 8001
     env_file:
-      - ./.env
+      - ./.env.2
     depends_on:
       - db
     volumes:
@@ -33,7 +33,7 @@ services:
     volumes:
       - local_pgdata1:/var/lib/postgresql/data
     env_file:
-      - ./.env
+      - ./.env.2
   
   pgadmin:
     image: dpage/pgadmin4:latest
