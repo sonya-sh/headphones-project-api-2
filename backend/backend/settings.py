@@ -15,7 +15,8 @@ import os
 from dotenv import load_dotenv
 
 
-env_path = '.env.2'
+
+env_path = '.env.test' 
 load_dotenv(env_path)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
